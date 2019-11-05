@@ -12,6 +12,7 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { firebase } from './firebase.module'
+import { AngularFireProvider } from '../providers/angular-fire/angular-fire';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -43,7 +44,7 @@ import { LoginPage } from '../pages/login/login';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
-  ]
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    AngularFireProvider  ]
 })
 export class AppModule {}
