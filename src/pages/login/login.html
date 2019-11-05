@@ -1,0 +1,30 @@
+<ion-content padding>
+
+  
+  <ion-grid>
+    <ion-row>
+      <ion-col></ion-col>
+      <ion-col col-12 col-sm-9 col-md-6 col-lg-4 col-xl-3>
+        <p class="title">Conserje</p>
+        <ion-card class="card" padding>
+          <br>
+          <ion-item>
+            <ion-label floating>Email</ion-label>
+            <ion-input placeholder="Email" [(ngModel)]="email" name="email" type="email"></ion-input>
+          </ion-item>
+          <br>
+          <ion-item>
+            <ion-label floating>Password</ion-label>
+            <ion-input placeholder="Password" [(ngModel)]="password" name="password" type="password"></ion-input>
+          </ion-item>
+          <br>
+          <button ion-button block color="light" (click)="login()">Inicie Sesión</button>
+          <br>
+        </ion-card>
+      </ion-col>
+      <ion-col></ion-col>
+    </ion-row>
+  </ion-grid>
+  
+
+</ion-content>

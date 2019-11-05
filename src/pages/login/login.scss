@@ -1,0 +1,27 @@
+page-login {
+
+    ion-content{
+        background-image: url(./../../assets/imgs/bg-login.jpg);
+        background-size: 1500px;
+        //filter: blur(10px);
+    }
+
+    .title{
+        font-size: 40px;
+        font-family: 'Courier New', Courier, monospace;
+        text-align: center;
+        color: bisque;
+        font-weight: bold;
+        text-shadow: 3px 2px color($colors, dark);
+        
+    }
+
+    .card{
+        background-color: #459cce;
+        box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    }
+
+    .item{
+        border-radius: 6px;
+    }
+}
