@@ -1,35 +1,48 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Conserje
-    </ion-title>
-  </ion-navbar>
-</ion-header>
-
 <ion-content padding class="content">
-
-    <ion-grid>
-        <ion-row>
-          <ion-col col-sm-6 col-md-4 col-lg-4 col-xl-4>
-            <div align="center">
-              <img src="./../../assets/imgs/profile.png" class="profilePhoto">
-            </div>
-          </ion-col>
-          <ion-col col-12 col-sm-4 col-md-6 col-lg-6 col-xl-6>
-            <ion-card padding>
-              <div>
-                <p>Nombre: Nombre de la persona</p>
-                <p>Domicilio: Numeración del condominio o edificio</p>
-              </div>
-            </ion-card>
-          </ion-col>
-          <ion-col col-12 col-sm-1 col-md-2 col-lg-2 col-xl-2></ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col></ion-col>
-          <ion-col></ion-col>
-          <ion-col></ion-col>
-        </ion-row>
-      </ion-grid>
-  
+  <button ion-fab (click)="logout()" top left><ion-icon name="power"></ion-icon></button>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-sm-6 col-md-4 col-lg-4 col-xl-4>
+        <div align="center">
+          <img src="./assets/imgs/profile.png" class="profilePhoto">
+        </div>
+      </ion-col>
+      <ion-col col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8>
+        <ion-card padding *ngIf="database.name" class="presentacion">
+          <div>
+            <p class="title">Bienvenid{{genero}}</p>
+            <p class="name">{{ (user | async)?.name }} {{ (user | async)?.surname }}.</p>
+            <p class="profile"><b>{{profile}}</b></p>
+            <p class="profile">{{database.name}}</p>
+            <p class="type">Tipo de cliente: <b>{{database.type}}</b></p>
+          </div>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <div margin-top>
+      <ion-row>
+        <ion-col col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4>
+          <ion-card class="button" (click)="toVisitasPage()">
+            <ion-icon name="people"></ion-icon>
+            <br>
+            Visitas
+          </ion-card>
+        </ion-col>
+        <ion-col col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4>
+          <ion-card class="button">
+            <ion-icon name="mail"></ion-icon>
+            <br>
+            Mensajes
+          </ion-card>
+        </ion-col>
+        <ion-col col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4>
+          <ion-card class="button">
+            <ion-icon name="checkbox-outline"></ion-icon>
+            <br>
+            Reservas
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </div>
+  </ion-grid>
 </ion-content>

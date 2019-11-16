@@ -1,0 +1,82 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-md-3 col-lg-3 col-xl-3>
+        </ion-col>
+        <ion-col col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6>
+          <ion-title>Inscriba Visita</ion-title>
+        </ion-col>
+        <ion-col col-md-3 col-lg-3 col-xl-3>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-md-3 col-lg-3 col-xl-3>
+      </ion-col>
+      <ion-col col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6>
+        
+        <p class="title">Ingrese los datos solicitados</p>
+      
+        <ion-list>
+          <ion-item>
+            <ion-input placeholder="Nombre y Apellido" type="text" [(ngModel)]="visita.nombre" name="nombre"></ion-input>
+          </ion-item>
+          <br>
+          <ion-item>
+            <ion-input placeholder="Run, sin puntos ni guión" type="text" [(ngModel)]="visita.run" name="run"></ion-input>
+          </ion-item>
+          <br>
+          <ion-item>
+            <ion-input placeholder="Teléfono" type="text" [(ngModel)]="visita.telefono" name="telefono"></ion-input>
+          </ion-item>
+          <br>
+          <ion-item>
+            <ion-label>Ingreso</ion-label>
+            <input item-end type="date" [(ngModel)]="visita.fecha" name="fecha">
+          </ion-item>
+          <br>
+          <ion-item>
+            <ion-label>Acompañantes</ion-label>
+            <ion-select placeholder="Elija" [(ngModel)]="visita.acompanantes" name="acompanante">
+              <ion-option value="1" (ionSelect)="conAcompanante()">Si</ion-option>
+              <ion-option value="0" (ionSelect)="sinAcompanante()">No</ion-option>
+              <ion-option value="2" (ionSelect)="sinAcompanante()">No lo se</ion-option>
+            </ion-select>
+          </ion-item>
+          <br *ngIf="acompanante">
+          <ion-item *ngIf="acompanante">
+            <ion-label>Cantidad</ion-label>
+            <ion-input type="number" [(ngModel)]="visita.cantidad" name="cantidad"></ion-input>
+          </ion-item>
+          <br>
+          <ion-item>
+            <ion-label>Ingresa Auto</ion-label>
+            <ion-select placeholder="Elija" [(ngModel)]="visita.autoIn" name="auto">
+              <ion-option value="1" (ionSelect)="conAuto()">Si</ion-option>
+              <ion-option value="0" (ionSelect)="sinAuto()">No</ion-option>
+              <ion-option value="2" (ionSelect)="sinAuto()">No lo se</ion-option>
+            </ion-select>
+          </ion-item>
+          <br *ngIf="auto">
+          <ion-item *ngIf="auto">
+            <ion-input placeholder="Ingrese Patente" [(ngModel)]="visita.patente" name="patente"></ion-input>
+          </ion-item>
+          <br>
+        </ion-list>
+        <button ion-button block round (click)="nuevaVisita()">Inscribir Visita</button>
+      </ion-col>
+      <ion-col col-md-3 col-lg-3 col-xl-3>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

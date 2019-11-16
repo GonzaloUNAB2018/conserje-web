@@ -17,13 +17,16 @@ import { AngularFireProvider } from '../providers/angular-fire/angular-fire';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
-
+import { VisitaPage } from '../pages/visita/visita';
+import { VisitasPage } from '../pages/visitas/visitas';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    LoginPage
+    LoginPage,
+    VisitaPage,
+    VisitasPage
   ],
   imports: [
     BrowserModule,
@@ -39,7 +42,9 @@ import { LoginPage } from '../pages/login/login';
   entryComponents: [
     MyApp,
     HomePage,
-    LoginPage
+    LoginPage,
+    VisitaPage,
+    VisitasPage
   ],
   providers: [
     StatusBar,

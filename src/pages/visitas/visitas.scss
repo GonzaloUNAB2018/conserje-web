@@ -1,0 +1,32 @@
+page-visitas {
+
+    .toolbar-background-md {
+        //border-color: #b2b2b2;
+        background: transparent;
+    }
+
+    .bar-button-default-md, .bar-button-clear-md-default, .bar-button-md-default {
+        color: white;
+        background-color: transparent;
+    }
+
+    .bar-button-default-md:hover:not(.disable-hover), .bar-button-clear-md-default:hover:not(.disable-hover), .bar-button-md-default:hover:not(.disable-hover) {
+        color: #3389bb;
+    }
+
+    .content{
+        background-color: #9dbed1;
+    }
+
+    .item-md{
+        border-radius: 20px;
+        margin-top: 10px;
+        p{
+            font-size: 1.7rem;
+        }
+    }
+
+    button {
+        background-color: transparent;
+    }
+}

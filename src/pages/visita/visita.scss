@@ -1,0 +1,44 @@
+page-visita {
+
+    .item-md [item-left], .item-md [item-right], .item-md [item-start], .item-md [item-end] {
+        margin: 0px 0px 0px 0;
+        border-color: transparent;
+    }
+
+    .label-md {
+        margin: 13px 8px 13px;
+        color: #919191
+    }
+
+    .toolbar-title.toolbar-title-md{
+        color: white;
+    }
+
+    .toolbar-background-md {
+        //border-color: #b2b2b2;
+        background: transparent;
+    }
+
+    .bar-button-default-md, .bar-button-clear-md-default, .bar-button-md-default {
+        color: white;
+        background-color: transparent;
+    }
+
+    .bar-button-default-md:hover:not(.disable-hover), .bar-button-clear-md-default:hover:not(.disable-hover), .bar-button-md-default:hover:not(.disable-hover) {
+        color: #3389bb;
+    }
+
+    .title{
+        text-align: center;
+        font-size: 2rem;
+        color: white;
+    }
+
+    .content{
+        background-color: #9dbed1;
+    }
+
+    .item-md{
+        border-radius: 20px;
+    }
+}
