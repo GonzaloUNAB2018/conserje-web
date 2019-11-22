@@ -43,40 +43,44 @@ export class VisitaPage {
   }
 
   nuevaVisita(){
-    let load_newUser = this.loadingCtrl.create({
-      content: 'Guardando visita'
-    });
-    const alert = this.alertCtrl.create({
-      title: 'Nueva visita',
-      message: '¿Desea confirmar nueva visita?',
-      buttons: [
-        {
-          text: 'Cancelar',
-          role: 'cancel',
-          handler: data => {
-            console.log('Cancel clicked');
-          }
-        },
-        {
-          text: 'Ok',
-          handler: data => {
-            //this.load_newUser;
-            load_newUser.present()
-            this.visita.id = Date.now();
-            if(this.visita.id){
-              console.log(this.visita)
+    if(this.visita.nombre&&this.visita.run&&this.visita.telefono&&this.visita.fecha&&this.visita.acompanantes&&this.visita.autoIn){
+      let load_newUser = this.loadingCtrl.create({
+        content: 'Guardando visita'
+      });
+      const alerta = this.alertCtrl.create({
+        title: 'Nueva visita',
+        message: '¿Desea confirmar nueva visita?',
+        buttons: [
+          {
+            text: 'Cancelar',
+            role: 'cancel',
+            handler: data => {
+              console.log('Cancel clicked');
             }
-            this.afProvider.nuevaVisita(this.dbId, this.visita, this.uid);
-            setTimeout(() => {
-              this.navCtrl.pop().then(()=>{
-                load_newUser.dismiss();
-              })
-            }, 1000);
+          },
+          {
+            text: 'Ok',
+            handler: data => {
+              //this.load_newUser;
+              load_newUser.present()
+              this.visita.id = Date.now();
+              if(this.visita.id){
+                console.log(this.visita)
+              }
+              this.afProvider.nuevaVisita(this.dbId, this.visita, this.uid);
+              setTimeout(() => {
+                this.navCtrl.pop().then(()=>{
+                  load_newUser.dismiss();
+                })
+              }, 1000);
+            }
           }
-        }
-      ]
-    });
-    alert.present();
+        ]
+      });
+      alerta.present();
+    }else{
+      alert('Faltan datos!');
+    };
   }
 
   conAcompanante(){

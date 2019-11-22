@@ -27,7 +27,7 @@ export class LoginPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');
-    //this.getUserState();
+    this.getUserState();
   }
 
   getUserState(){
