@@ -1,10 +1,9 @@
 export const firebase = {
-    apiKey: "AIzaSyAmC8yDR7hoNe_nb0-AS3LfPzVt8dEBWuA",
-    authDomain: "conserje-cl.firebaseapp.com",
-    databaseURL: "https://conserje-cl.firebaseio.com",
-    projectId: "conserje-cl",
-    storageBucket: "conserje-cl.appspot.com",
-    messagingSenderId: "900332369291",
-    appId: "1:900332369291:web:fda2d0689cbb7ea1472b8e",
-    measurementId: "G-JCKYZ89NMR"
+    apiKey: "AIzaSyD_Ige-a_8ubh_1FMMbLPtOcy-9GOlARkM",
+    authDomain: "conserje-chile.firebaseapp.com",
+    databaseURL: "https://conserje-chile.firebaseio.com",
+    projectId: "conserje-chile",
+    storageBucket: "conserje-chile.appspot.com",
+    messagingSenderId: "335325206129",
+    appId: "1:335325206129:web:3c515a7897e631d642edd0"
 }
